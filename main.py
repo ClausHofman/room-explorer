@@ -38,8 +38,10 @@ def save_game(player, filename):
         'room_count': room_count
     }
 
-    print(f"Printing game state: {game_state}")
-    print(f"Printing game rooms: {serialized_rooms}")
+    # TODO: Update saving and loading to handle equipment
+
+    # print(f"Printing game state: {game_state}")
+    # print(f"Printing game rooms: {serialized_rooms}")
 
     # print(f"Serialized Rooms: {json.dumps(serialized_rooms, indent=2)}")
     # print(f"Player State: {json.dumps(player_state, indent=2)}")
@@ -179,6 +181,7 @@ class Item:
 class Room:
     @staticmethod
     def available_directions():
+        # TODO: update so that it correctly returns the directions that are available for the current room
         return ['north', 'northeast', 'east', 'southeast', 'south', 'southwest', 'west', 'northwest', 'up', 'down']
     
     def __init__(self, name, description):
@@ -348,6 +351,7 @@ class Creature:
         while not self.quit_flag.is_set():
             available_directions = self.current_room.available_directions()
             if available_directions:
+                # TODO: Available directions should be based on actual available exits
                 direction = random.choice(available_directions)
                 next_room = self.current_room.exits[direction]
 
@@ -631,7 +635,7 @@ def user_input_thread(player, quit_flag):
     custom_entrance = set(['enter', 'hut', 'out', 'leave'])
     while not quit_flag.is_set():
         try:
-            user_input = prompt("Enter a command: direction, look, create_object, remove, object_names, create_creature, move_creature, remove_creature, create_item, pick_up, drop, inventory, save, load, quit): ").lower().strip()
+            user_input = prompt("Enter a command: direction, look(l), create_object, remove, object_names, create_creature, move_creature, remove_creature, create_item, pick_up, get, drop, inventory, save, load, quit): ").lower().strip()
             # Check if the input is empty or contains only whitespace
             if not user_input.strip():
                 print("Error, please try again. Available commands: look, create_object, create_item, remove, object_names, create_creature, move_creature, pick_up, create_item, drop, inventory, save, load, quit.")
@@ -683,7 +687,7 @@ def user_input_thread(player, quit_flag):
             elif command == 'd' or command == 'down':               
                     direction = 'down'
                     player.move(direction)                                                   
-            elif command == 'look':
+            elif command == 'look' or command == 'l':
                     print("\nAvailable directions:", player.current_room.available_directions())
                     print(f"You are in {player.current_room.name}.")
                     print(player.current_room.description)
@@ -727,7 +731,7 @@ def user_input_thread(player, quit_flag):
             elif command == 'drop':
                 item_name = prompt("Enter the name of the item to drop: ")
                 player.drop_item(item_name)
-            elif command == 'inventory':
+            elif command == 'inventory' or command == 'i':
                 player.display_inventory()
             elif user_input.lower() == 'save':
                 filename = prompt("Enter the filename to save the game: ")
