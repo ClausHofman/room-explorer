@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Documentation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav {
+            width: 220px;
+            background: #f8f8f8;
+            padding: 1em;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h2 {
+            font-size: 1.2em;
+            margin-top: 0;
+        }
+
+        nav a,
+        .toggle {
+            display: block;
+            color: #333;
+            padding: 0.5em 0;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        nav a:hover,
+        .toggle:hover {
+            background: #ddd;
+            padding-left: 10px;
+        }
+
+        nav .dropdown {
+            display: none;
+            padding-left: 1em;
+        }
+
+        nav .dropdown .toggle {
+            font-weight: normal;
+        }
+
+        main {
+            margin-left: 240px;
+            padding: 2em;
+            flex: 1;
+        }
+
+        .module-container {
+            margin-bottom: 2em;
+            border: 1px solid #ccc;
+            padding: 1em;
+            background-color: #f5f5f5;
+        }
+
+        .class-container {
+            margin-bottom: 1em;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1em;
+        }
+
+        .method-container {
+            margin-bottom: 0.5em;
+        }
+
+        h2 {
+            border-bottom: 2px solid #333;
+            padding-bottom: 0.5em;
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: x-large;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>Contents</h2>
+        <div class="toggle" onclick="toggleDropdown('module1-dropdown')">Module 1</div>
+        <div id="module1-dropdown" class="dropdown">
+            <a href="#module1-class1">Class 1</a>
+            <a href="#module1-class1-method1">Method 1</a>
+            <a href="#module1-class1-method2">Method 2</a>
+            <a href="#module1-class2">Class 2</a>
+            <a href="#module1-class2-method1">Method 1</a>
+            <a href="#module1-class2-method2">Method 2</a>
+        </div>
+        <div class="toggle" onclick="toggleDropdown('module2-dropdown')">Module 2</div>
+        <div id="module2-dropdown" class="dropdown">
+            <a href="#module2-class3">Class 3</a>
+            <a href="#module2-class3-method1">Method 1</a>
+            <a href="#module2-class3-method2">Method 2</a>
+            <a href="#module2-class4">Class 4</a>
+            <a href="#module2-class4-method1">Method 1</a>
+            <a href="#module2-class4-method2">Method 2</a>
+        </div>
+        <a href="#examples">Examples</a>
+        <a href="#api-reference">API Reference</a>
+        <a href="#faq">FAQ</a>
+        <a href="#notes">Notes</a>
+    </nav>
+
+    <main>
+        <div class="module-container" id="module1">
+            <h2>Module 1</h2>
+
+            <div class="class-container" id="module1-class1">
+                <h3>Class 1</h3>
+                <div class="method-container" id="module1-class1-method1">
+                    <h4>Method 1</h4>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iusto illo eum quibusdam iste quia
+                        suscipit assumenda lorem*100 nam officiis. Officia rem modi totam laboriosam amet nostrum
+                        cupiditate qui
+                        accusantium fuga natus.</p>
+                </div>
+                <div class="method-container" id="module1-class1-method2">
+                    <h4>Method 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit repudiandae ratione dolorum
+                        accusamus sunt eligendi, perspiciatis veniam iusto iste ipsam. Maiores animi fugiat voluptatum
+                        tempora eius soluta placeat sit deserunt!</p>
+                </div>
+            </div>
+
+            <div class="class-container" id="module1-class2">
+                <h3>Class 2</h3>
+                <div class="method-container" id="module1-class2-method1">
+                    <h4>Method 1</h4>
+                    <p>Description of Method 1 of Class 2 in Module 1.</p>
+                </div>
+                <div class="method-container" id="module1-class2-method2">
+                    <h4>Method 2</h4>
+                    <p>Description of Method 2 of Class 2 in Module 1.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="module-container" id="module2">
+            <h2>Module 2</h2>
+
+            <div class="class-container" id="module2-class3">
+                <h3>Class 3</h3>
+                <div class="method-container" id="module2-class3-method1">
+                    <h4>Method 1</h4>
+                    <p>Description of Method 1 of Class 3 in Module 2.</p>
+                </div>
+                <div class="method-container" id="module2-class3-method2">
+                    <h4>Method 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis similique facere neque sint
+                        earum quia numquam, blanditiis, delectus saepe quos quisquam a vitae harum exercitationem ipsa,
+                        ab illo cupiditate officiis!</p>
+                </div>
+            </div>
+
+            <div class="class-container" id="module2-class4">
+                <h3>Class 4</h3>
+                <div class="method-container" id="module2-class4-method1">
+                    <h4>Method 1</h4>
+                    <p>Description of Method 1 of Class 4 in Module 2.</p>
+                </div>
+                <div class="method-container" id="module2-class4-method2">
+                    <h4>Method 2</h4>
+                    <p>Description of Method 2 of Class 4 in Module 2.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <section id="examples">
+            <h2>Examples</h2>
+            <p>Examples of how to use the program for different tasks, with sample code and explanations.</p>
+        </section>
+
+        <section id="api-reference">
+            <h2>API Reference</h2>
+            <p>Comprehensive reference of the program's API, including descriptions of functions, classes, and modules.
+            </p>
+        </section>
+
+        <section id="faq">
+            <h2>Game Development Goals and Ideas</h2>
+            <pre><p>
+                Immediate Goals (Short-Term)
+                Refine Inventory System:
+
+                Implement equipment slots for monsters and the player.
+                Allow monsters to drop their inventory and equipment upon defeat.
+                Implement Basic Stat and Level System:
+
+                Define primary stats (e.g., health, attack, defense).
+                Establish leveling mechanics based on experience points (XP).
+                Enable stat advancement upon leveling up.
+                Skills and Experience:
+
+                Design a skill system for the player character.
+                Integrate experience points (XP) for gaining levels and improving skills.
+                Define how skills are acquired, trained, and utilized in gameplay.
+                Future Development (Mid-to-Long-Term)
+                Combat System Enhancement:
+
+                Introduce turn-based or strategic combat mechanics.
+                Incorporate abilities or special attacks based on skills and equipment.
+                NPC Interactions and Quests:
+
+                Expand dialogue options and interactions with NPCs.
+                Create quest mechanics with varying objectives and rewards.
+                Dynamic World Events:
+
+                Implement events that affect gameplay based on player actions or game time.
+                Introduce environmental changes or challenges dynamically.
+                Visual and GUI Enhancements:
+
+                Consider adding graphical elements or ASCII art for visual representation.
+                Enhance user interface for ease of navigation and interaction.
+                Localization and Text Refinement:
+
+                Prepare for localization into different languages if targeting broader audiences.
+                Refine textual descriptions and narrative elements for immersion.
+                General Considerations
+                Testing and Debugging: Allocate time for thorough testing of new features and mechanics.
+                Player Feedback and Iteration: Plan to gather feedback from playtests to refine and improve the game
+                iteratively.
+                Documentation and Updates: Maintain comprehensive documentation to track changes, features, and known
+                issues.</p></pre>
+        </section>
+
+        <section id="notes">
+            <h2>Notes</h2>
+            <h3>Testing</h3>
+            <p>pytest room_explorer/tests/test_game.py </p>
+            <p>pytest -k test_equipment.py > test_list_equipment_output.txt</p>
+            <h3>Open the program in a separate window</h3>
+            <h4>In Powershell</h4>
+            <p>Start-Process cmd "/k python your_script.py"</p>
+
+            <h4>In Windows Command Prompt</h4>
+            <p>start cmd /k python your_script.py</p>
+
+            <h4>If you have Python Launcher (py) installed and configured in your system PATH, you can use it directly.
+            </h4>
+            <p>py your_script.py</p>
+
+            <h4>Create Coverage Report</h4>
+            <p>pytest --cov=main_copy_2 --cov-report=html</p>
+        </section>
+    </main>
+
+    <script>
+        function toggleDropdown(id) {
+            var dropdown = document.getElementById(id);
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            } else {
+                dropdown.style.display = "block";
+                // No need to scroll, as we're only toggling visibility now
+            }
+        }
+    </script>
+
+</body>
+
+</html>

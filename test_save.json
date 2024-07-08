@@ -1,0 +1,137 @@
+{
+    "player": {
+        "name": "Hero",
+        "current_room": "Hall",
+        "inventory": {}
+    },
+    "rooms": [
+        {
+            "name": "Hall",
+            "description": "You are in a grand hall with a doorway leading to north.",
+            "exits": {
+                "north": "Kitchen",
+                "northeast": "Garden",
+                "east": "Test1",
+                "southeast": "Test1",
+                "south": "Test1",
+                "southwest": "Test1",
+                "west": "Test1",
+                "northwest": "Test1",
+                "up": "Test1",
+                "down": "Test1"
+            },
+            "objects": [],
+            "creatures": [
+                {
+                    "name": "A goblin",
+                    "description": "goblin",
+                    "current_room": "Hall",
+                    "move_interval": 10,
+                    "wandering": false
+                }
+            ],
+            "inventory": {}
+        },
+        {
+            "name": "Kitchen",
+            "description": "You are in a cozy kitchen with a stove and a table.",
+            "exits": {
+                "south": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Garden",
+            "description": "You are in a beautiful garden with flowers and a fountain.",
+            "exits": {
+                "southwest": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "west": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "northwest": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "north": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "northeast": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "east": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "southeast": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "down": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        },
+        {
+            "name": "Test1",
+            "description": "A generic room",
+            "exits": {
+                "up": "Hall"
+            },
+            "objects": [],
+            "creatures": [],
+            "inventory": {}
+        }
+    ],
+    "room_count": 11
+}
