@@ -653,34 +653,34 @@ def user_input_thread(player, quit_flag):
                     print("Please specify an item to pick up.")            
             elif command in custom_entrance:
                 player.move(command)
-            elif command == 'n':               
+            elif command == 'n' or command == 'north':               
                     direction = 'north'
                     player.move(direction)
-            elif command == 'e':               
+            elif command == 'e' or command == 'east':               
                     direction = 'east'
                     player.move(direction)
-            elif command == 's':               
+            elif command == 's' or command == 'south':               
                     direction = 'south'
                     player.move(direction)
-            elif command == 'w':               
+            elif command == 'w' or command == 'west':               
                     direction = 'west'
                     player.move(direction)
-            elif command == 'ne':               
+            elif command == 'ne' or command == 'northeast':               
                     direction = 'northeast'
                     player.move(direction)
-            elif command == 'se':               
+            elif command == 'se' or command == 'southeast':               
                     direction = 'southeast'
                     player.move(direction) 
-            elif command == 'sw':               
+            elif command == 'sw' or command == 'southwest':               
                     direction = 'southwest'
                     player.move(direction)
-            elif command == 'nw':               
+            elif command == 'nw' or command == 'northwest':               
                     direction = 'northwest'
                     player.move(direction)
-            elif command == 'u':               
+            elif command == 'u' or command == 'up':               
                     direction = 'up'
                     player.move(direction)
-            elif command == 'd':               
+            elif command == 'd' or command == 'down':               
                     direction = 'down'
                     player.move(direction)                                                   
             elif command == 'look':
