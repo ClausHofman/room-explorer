@@ -631,7 +631,7 @@ def user_input_thread(player, quit_flag):
     custom_entrance = set(['enter', 'hut', 'out', 'leave'])
     while not quit_flag.is_set():
         try:
-            user_input = prompt("Enter a command: look, create, remove, object_names, create_creature, move_creature, remove_creature, create_item, pick_up, drop, inventory, save, load, quit): ").lower().strip()
+            user_input = prompt("Enter a command: direction, look, create_object, remove, object_names, create_creature, move_creature, remove_creature, create_item, pick_up, drop, inventory, save, load, quit): ").lower().strip()
             # Check if the input is empty or contains only whitespace
             if not user_input.strip():
                 print("Error, please try again. Available commands: look, create_object, create_item, remove, object_names, create_creature, move_creature, pick_up, create_item, drop, inventory, save, load, quit.")
