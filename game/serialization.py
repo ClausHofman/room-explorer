@@ -1,10 +1,10 @@
-from game.room import Room
-from game.creature import Creature
-from game.player import Player
-from game.items_and_equipment import Item, GameObject
+from creature import Creature
+from items_and_equipment import Item, GameObject
+from room import current_player_room, room_count, game_rooms
 import json
 
 def save_game(player, filename):
+    
     filename = str(filename)
 
     if not filename.endswith('.json'):
@@ -57,6 +57,9 @@ def save_game(player, filename):
     
 
 def load_game(filename):
+    from room import Room  # Local import to avoid circular dependency
+    from player import Player  # Local import to avoid circular dependency
+    
     filename = str(filename)
 
     global game_rooms, room_count
