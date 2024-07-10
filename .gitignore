@@ -163,4 +163,5 @@ cython_debug/
 #.idea/
 
 probably_junk/
+test_code/
 tasks_and_ideas.txt
