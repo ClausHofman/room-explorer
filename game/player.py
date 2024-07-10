@@ -1,6 +1,6 @@
-from game.items_and_equipment import Item, Equipment
-from game.serialization import save_game, load_game
-from game.room import update_current_player_room
+from items_and_equipment import Item, Equipment
+from serialization import save_game, load_game
+from room import update_current_player_room
 
 class Player:
     def __init__(self, name, current_room):

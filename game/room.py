@@ -1,5 +1,9 @@
-from game.creature import Creature
-from game.items_and_equipment import Item, GameObject, Equipment
+from creature import Creature
+from items_and_equipment import Item, GameObject, Equipment
+
+current_player_room = None
+room_count = 0
+game_rooms = []
 
 class Room:
     @staticmethod

@@ -1,14 +1,11 @@
-from game.room import create_game_world
-from game.items_and_equipment import Equipment
-from game.player import Player
-from game.input_handler import user_input_thread
+from room import create_game_world, current_player_room, room_count, game_rooms
+from player import Player
+from input_handler import user_input_thread
 import time
 import threading
 from prompt_toolkit import prompt
 
-current_player_room = None
-room_count = 0
-game_rooms = []
+
 
 
 def main():
