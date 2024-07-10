@@ -1,3 +1,5 @@
+from room import Room  # Local import to avoid circular dependency
+from player import Player  # Local import to avoid circular dependency
 from creature import Creature
 from items_and_equipment import Item, GameObject
 from room import current_player_room, room_count, game_rooms
@@ -57,8 +59,6 @@ def save_game(player, filename):
     
 
 def load_game(filename):
-    from room import Room  # Local import to avoid circular dependency
-    from player import Player  # Local import to avoid circular dependency
     
     filename = str(filename)
 

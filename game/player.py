@@ -1,5 +1,4 @@
 from items_and_equipment import Item, Equipment
-from serialization import save_game, load_game
 from room import update_current_player_room
 
 class Player:
@@ -167,13 +166,14 @@ class Player:
         else:
             print(f"No item named '{item_name}' found in your inventory.")
 
-        
-    def save_game(self, filename):
-        save_game(self, filename)
+    # TODO: Don't do saving/loading in the Player class
+    
+    # def save_game(self, filename):
+    #     save_game(self, filename)
 
-    def load_game(self, filename):
-        global game_rooms
-        new_player, game_rooms = load_game(filename)
-        self.name = new_player.name
-        self.current_room = new_player.current_room
-        self.inventory = new_player.inventory
+    # def load_game(self, filename):
+    #     global game_rooms
+    #     new_player, game_rooms = load_game(filename)
+    #     self.name = new_player.name
+    #     self.current_room = new_player.current_room
+    #     self.inventory = new_player.inventory
